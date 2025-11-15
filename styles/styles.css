@@ -1,1 +1,276 @@
 /* aca iran todos los estilos */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(180deg, #0a0e27 0%, #1a1a3e 30%, #0f1a2e 60%, #050810 100%);
+    color: #e0e0e0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.page-wrapper {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Main Content */
+.main-content {
+    width: 100%;
+}
+
+/* Header Section */
+.header-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.main-title {
+    font-size: 64px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+    background: linear-gradient(90deg, #ffffff 0%, #ffffff 60%, #c800ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #b0b0b0;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+/* Content Box with Gradient Border */
+.content-box {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(10, 14, 39, 0.8) 0%, rgba(20, 20, 50, 0.6) 100%);
+    border-radius: 12px;
+    
+    /* Gradient border effect */
+    background-clip: padding-box;
+    border: 3px solid transparent;
+    background-image: 
+        linear-gradient(135deg, rgba(10, 14, 39, 0.8) 0%, rgba(20, 20, 50, 0.6) 100%),
+        linear-gradient(135deg, #00d9ff 0%, #c800ff 50%, #00d9ff 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+/* Form Section */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.form-title {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.form-description {
+    font-size: 13px;
+    color: #999;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.form-input {
+    background: rgba(30, 30, 50, 0.5);
+    border: 1px solid #444;
+    border-radius: 6px;
+    padding: 12px 14px;
+    color: #d0d0d0;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.form-input::placeholder {
+    color: #777;
+}
+
+.form-input:focus {
+    outline: none;
+    background: rgba(30, 30, 50, 0.7);
+    border-color: #6b2fbf;
+    box-shadow: 0 0 12px rgba(107, 47, 191, 0.2);
+}
+
+.form-input.full-width {
+    grid-column: 1 / -1;
+}
+
+textarea.form-input {
+    resize: vertical;
+    min-height: 100px;
+    font-family: inherit;
+}
+
+.submit-button {
+    background: linear-gradient(135deg, #6b2fbf 0%, #c800ff 100%);
+    border: none;
+    color: #ffffff;
+    padding: 14px 24px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+}
+
+.submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(200, 0, 255, 0.4);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+/* Image Section */
+.image-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.image-placeholder {
+    border: 3px dotted rgba(10, 150, 255, 0.85);
+    border-radius: 8px;
+    padding: 40px;
+    background-image: url(/assets/astronauta.png);
+    background-size: cover;
+    min-height: 516px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.astronaut-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* centrado clásico como antes */
+    display: block;
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(2,6,12,0.75) 60%);
+    padding: 18px 20px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.image-quote {
+    font-size: 13px;
+    color: #e6e6e6;
+    line-height: 1.6;
+    max-width: 90%;
+    margin: 0 6px 6px 6px;
+}
+
+/* pequeña mejora para el autor */
+.image-quote strong {
+    display: block;
+    margin-top: 8px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .content-box {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 30px;
+    }
+
+    .main-title {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 36px;
+    }
+
+    .main-title .highlight {
+        padding: 8px 16px;
+    }
+
+    .form-title {
+        font-size: 22px;
+    }
+
+    .content-box {
+        padding: 20px;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .main-title {
+        font-size: 28px;
+    }
+
+    .main-title .highlight {
+        display: block;
+        padding: 6px 12px;
+    }
+
+    .content-box {
+        grid-template-columns: 1fr;
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
