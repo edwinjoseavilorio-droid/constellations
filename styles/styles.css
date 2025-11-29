@@ -176,7 +176,7 @@ textarea.form-input {
     border: 3px solid #161819  ;
     border-radius: 8px;
     padding: 40px;
-    background-image: url(/assets/astronauta.png);
+    background-image: url("./../assets/astronauta.png");
     background-size: cover;
     min-height: 516px;
     display: block;
