@@ -277,3 +277,8 @@ textarea.form-input {
         grid-template-columns: 1fr;
     }
 }
+span.rocket {
+    transform: rotate(46deg) !important;
+    display: block;
+    font-size: 15px;
+}
